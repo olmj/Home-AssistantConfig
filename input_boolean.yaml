@@ -1,0 +1,28 @@
+gjester:
+  name: Gjester på besøk
+  initial: off
+  icon: mdi:account
+stue_relax:
+  name: Stue relax
+  initial: off
+  icon: mdi:lightbulb
+stue_fokus:
+  name: Stue fokus
+  initial: off
+  icon: mdi:lightbulb
+stue_normal:
+  name: Stue normal
+  initial: off
+  icon: mdi:lightbulb
+soverom_relax:
+  name: Soverom relax
+  initial: off
+  icon: mdi:lightbulb
+soverom_fokus:
+  name: Soverom fokus
+  initial: off
+  icon: mdi:lightbulb
+soverom_normal:
+  name: Soverom normal
+  initial: off
+  icon: mdi:lightbulb

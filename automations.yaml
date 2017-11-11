@@ -1,0 +1,163 @@
+- alias: Lys stue
+  trigger:
+    - platform: state
+      entity_id: input_number.lamp_bright_stue
+    - platform: state
+      entity_id: input_number.lamp_temp_stue
+  action:
+    - service: light.turn_on
+      data_template:
+        entity_id: group.stue
+        brightness: '{{ states.input_number.lamp_bright_stue.state | int }}'
+    - service: light.turn_on
+      data_template:
+        entity_id: group.stue
+        color_temp: '{{ states.input_number.lamp_temp_stue.state | int }}'
+
+- alias: Lys soverom
+  trigger:
+    - platform: state
+      entity_id: input_number.lamp_bright_soverom
+    - platform: state
+      entity_id: input_number.lamp_temp_soverom
+  action:
+    - service: light.turn_on
+      data_template:
+        entity_id: group.soverom
+        brightness: '{{ states.input_number.lamp_bright_soverom.state | int }}'
+    - service: light.turn_on
+      data_template:
+        entity_id: group.soverom
+        color_temp: '{{ states.input_number.lamp_temp_soverom.state | int }}'
+
+- alias: Stue relax
+  trigger:
+    platform: state
+    entity_id: input_boolean.stue_relax
+    from: 'off'
+    to: 'on'
+  action:
+    - service: light.turn_on
+      data:
+        entity_id: group.stue
+        brightness: 25
+    - service: light.turn_on
+      data:
+        entity_id: group.stue
+        color_temp: 450
+    - service: input_boolean.turn_off
+      data:
+        entity_id: input_boolean.stue_normal
+    - service: input_boolean.turn_off
+      data:
+        entity_id: input_boolean.stue_fokus
+
+- alias: Stue normal
+  trigger:
+    platform: state
+    entity_id: input_boolean.stue_normal
+    from: 'off'
+    to: 'on'
+  action:
+    - service: light.turn_on
+      data:
+        entity_id: group.stue
+        brightness: 203
+    - service: light.turn_on
+      data:
+        entity_id: group.stue
+        color_temp: 367
+    - service: input_boolean.turn_off
+      data:
+        entity_id: input_boolean.stue_relax
+    - service: input_boolean.turn_off
+      data:
+        entity_id: input_boolean.stue_fokus
+
+- alias: Stue fokus
+  trigger:
+    platform: state
+    entity_id: input_boolean.stue_fokus
+    from: 'off'
+    to: 'on'
+  action:
+    - service: light.turn_on
+      data:
+        entity_id: group.stue
+        brightness: 254
+    - service: light.turn_on
+      data:
+        entity_id: group.stue
+        color_temp: 250
+    - service: input_boolean.turn_off
+      data:
+        entity_id: input_boolean.stue_relax
+    - service: input_boolean.turn_off
+      data:
+        entity_id: input_boolean.stue_normal
+
+- alias: Soverom relax
+  trigger:
+    platform: state
+    entity_id: input_boolean.soverom_relax
+    from: 'off'
+    to: 'on'
+  action:
+    - service: light.turn_on
+      data:
+        entity_id: group.soverom
+        brightness: 25
+    - service: light.turn_on
+      data:
+        entity_id: group.soverom
+        color_temp: 450
+    - service: input_boolean.turn_off
+      data:
+        entity_id: input_boolean.soverom_normal
+    - service: input_boolean.turn_off
+      data:
+        entity_id: input_boolean.soverom_fokus
+
+- alias: Soverom normal
+  trigger:
+    platform: state
+    entity_id: input_boolean.soverom_normal
+    from: 'off'
+    to: 'on'
+  action:
+    - service: light.turn_on
+      data:
+        entity_id: group.soverom
+        brightness: 203
+    - service: light.turn_on
+      data:
+        entity_id: group.soverom
+        color_temp: 367
+    - service: input_boolean.turn_off
+      data:
+        entity_id: input_boolean.soverom_relax
+    - service: input_boolean.turn_off
+      data:
+        entity_id: input_boolean.soverom_fokus
+
+- alias: Soverom fokus
+  trigger:
+    platform: state
+    entity_id: input_boolean.soverom_fokus
+    from: 'off'
+    to: 'on'
+  action:
+    - service: light.turn_on
+      data:
+        entity_id: group.soverom
+        brightness: 254
+    - service: light.turn_on
+      data:
+        entity_id: group.soverom
+        color_temp: 250
+    - service: input_boolean.turn_off
+      data:
+        entity_id: input_boolean.soverom_relax
+    - service: input_boolean.turn_off
+      data:
+        entity_id: input_boolean.soverom_normal

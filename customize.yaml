@@ -1,0 +1,44 @@
+#### Trådfri
+light.tradfri_bulb_e27_ws_opal_980lm:
+  friendly_name: Stue spisebord
+light.tradfri_bulb_e27_ws_opal_980lm_3:
+  friendly_name: Stue spisebord
+light.tradfri_bulb_gu10_ws_400lm_3:
+  friendly_name: Soverom
+light.tradfri_bulb_gu10_ws_400lm_4:
+  friendly_name: Soverom
+light.tradfri_bulb_gu10_ws_400lm_5:
+  friendly_name: Soverom
+
+### Homebridge
+group.stue:
+  homebridge_visible: true
+group.soverom:
+  homebridge_visible: true
+input_boolean.stue_normal:
+  homebridge_visible: true
+input_boolean.stue_fokus:
+  homebridge_visible: true
+input_boolean.stue_relax:
+  homebridge_visible: true
+input_boolean.soverom_normal:
+  homebridge_visible: true
+input_boolean.soverom_fokus:
+  homebridge_visible: true
+input_boolean.soverom_relax:
+  homebridge_visible: true
+#### Yr
+sensor.yr_precipitation:
+  friendly_name: Nedbør
+  icon: mdi:weather-rainy
+sensor.yr_humidity:
+  friendly_name: Luftfuktighet
+  icon: mdi:water-percent
+sensor.yr_temperature:
+  friendly_name: temperature
+  icon: mdi:temperature-celsius
+sensor.yr_wind_speed:
+  friendly_name: Vindhastighet
+  icon: mdi:weather-windy
+sensor.yr_symbol:
+  friendly_name: Været no

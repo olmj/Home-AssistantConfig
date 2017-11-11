@@ -1,0 +1,22 @@
+scene:
+  - name: Stue fokus
+    entities:
+    - service: light.turn_on
+      data:
+        entity_id: group.stue
+        brightness: 254
+        color_temp: 250
+  - name: Stue normal
+    entities:
+    - service: light.turn_on
+      data:
+        entity_id: group.stue
+        brightness: 203
+        color_temp: 367
+  - name: Stue relax
+    entities:
+    - service: light.turn_on
+      data:
+        entity_id: group.stue
+        brightness: 25
+        color_temp: 450

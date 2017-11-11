@@ -1,0 +1,24 @@
+lamp_bright_stue:
+  name: Styrke
+  initial: 0
+  min: 0
+  max: 254
+  step: 5
+lamp_temp_stue:
+  name: Fargetemperatur
+  initial: 300
+  min: 250
+  max: 450
+  step: 10
+lamp_bright_soverom:
+  name: Styrke
+  initial: 0
+  min: 0
+  max: 254
+  step: 5
+lamp_temp_soverom:
+  name: Fargetemperatur
+  initial: 300
+  min: 250
+  max: 450
+  step: 10
